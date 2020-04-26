@@ -1,0 +1,2 @@
+[ymin,xmin,ymax,xmax] for boxes are:  [[438, 248, 483, 348], [358, 249, 398, 349], [157, 248, 205, 348]]
+Scores for corresponding boxes are:  [86.30002737045288, 77.13745832443237, 69.84725594520569]

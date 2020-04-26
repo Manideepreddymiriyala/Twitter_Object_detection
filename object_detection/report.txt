@@ -1,0 +1,69 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 2 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: eval_util.py
+--------------------------------------------------------------------------------
+eval_util.py:40:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+eval_util.py:327:7: ERROR: Using member tf.contrib.slim.queues.QueueRunners in deprecated module tf.contrib. tf.contrib.slim.queues.QueueRunners cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'eval_util.py'
+ outputting to 'eval_util_updated.py'
+--------------------------------------------------------------------------------
+
+40:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+80:2: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+81:19: INFO: tf.summary.FileWriterCache requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+81:19: INFO: Renamed 'tf.summary.FileWriterCache' to 'tf.compat.v1.summary.FileWriterCache'
+83:14: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+84:8: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+87:4: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+88:2: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+168:2: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+222:12: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+223:6: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+225:16: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+229:19: INFO: tf.summary.FileWriterCache requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+229:19: INFO: Renamed 'tf.summary.FileWriterCache' to 'tf.compat.v1.summary.FileWriterCache'
+232:2: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+308:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+308:34: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+309:11: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+310:11: INFO: Renamed 'tf.local_variables_initializer' to 'tf.compat.v1.local_variables_initializer'
+311:11: INFO: Renamed 'tf.tables_initializer' to 'tf.compat.v1.tables_initializer'
+319:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+323:4: INFO: Renamed 'tf.train.write_graph' to 'tf.io.write_graph'
+327:7: ERROR: Using member tf.contrib.slim.queues.QueueRunners in deprecated module tf.contrib. tf.contrib.slim.queues.QueueRunners cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+331:10: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+341:12: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+366:6: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+368:6: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+371:6: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+372:6: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+378:12: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+381:12: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+388:20: INFO: Renamed 'tf.train.global_step' to 'tf.compat.v1.train.global_step'
+388:47: INFO: Renamed 'tf.train.get_global_step' to 'tf.compat.v1.train.get_global_step'
+395:10: INFO: Renamed 'tf.logging.error' to 'tf.compat.v1.logging.error'
+495:4: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+499:6: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+502:6: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+523:8: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+529:6: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+554:9: INFO: Removed argument align_corners for function tf.image.resize_images
+554:9: INFO: Renamed 'tf.image.resize_images' to 'tf.image.resize'
+627:19: INFO: Added keywords to args of function 'tf.shape'
+756:23: INFO: Added keywords to args of function 'tf.shape'
+757:19: INFO: Added keywords to args of function 'tf.shape'
+767:23: INFO: Added keywords to args of function 'tf.shape'
+768:19: INFO: Added keywords to args of function 'tf.shape'
+796:8: INFO: Changed tf.to_int64 call to tf.cast(..., dtype=tf.int64).
+850:26: INFO: Added keywords to args of function 'tf.shape'
+--------------------------------------------------------------------------------
+
